@@ -4,9 +4,14 @@ import Message from './js/Message'
 
 import './css/style.css'
 
-ReactDOM.render(
+import { createRoot } from 'react-dom/client';
+
+const domNode =  document.getElementById('react-container') // eslint-disable-line no-undef
+
+const root = createRoot(domNode);
+
+root.render(
   <Message />,
-  document.getElementById('react-container') // eslint-disable-line no-undef
 )
 
 if(module.hot) // eslint-disable-line no-undef  
